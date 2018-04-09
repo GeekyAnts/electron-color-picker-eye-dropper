@@ -7,6 +7,7 @@ import Example from "../../src";
 
 class Demo extends Component {
   constructor() {
+
     super();
     this.state = {
       img: ""
@@ -15,17 +16,24 @@ class Demo extends Component {
   }
 
   attach() {
-    Example.say();
+    // console.log(Example.say())
+    Example.pick();
   }
 
   render() {
+    console.log("inside main render")
     return (
-      <div>
+      <div style={{flex: 1}}>
         <img src={this.state.img} />
         <h1>color-eye-dropper Demo</h1>
         <button type="button" onClick={this.attach}>
-          fdsf
+          Pick Color
         </button>
+        <div style = {{margin: '10px'}}>
+          <div id="rgb-color-box" style={{border: "solid 1px", padding: "15px", display: "none"}}>
+          </div>
+          <p id="rgb-values"></p>
+        </div>
       </div>
     );
   }
