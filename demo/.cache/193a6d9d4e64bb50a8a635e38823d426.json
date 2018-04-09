@@ -1,0 +1,1 @@
+{"dependencies":[],"generated":{"js":"\"use strict\";\n\n//const { remote } = require(\"electron\");\n//const { BrowserWindow } = remote;\n\nmodule.exports = {\n  say: function say() {\n    alert(\"sdds\");\n    //const win = new BrowserWindow();\n  }\n};"},"hash":"6a0d61f71d4caacb4d157c2da412fded"}

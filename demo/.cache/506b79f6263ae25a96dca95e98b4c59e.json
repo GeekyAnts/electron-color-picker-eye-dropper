@@ -1,0 +1,1 @@
+{"dependencies":[{"name":"electron","loc":{"line":1,"column":27}}],"generated":{"js":"\"use strict\";\n\nvar _require = require(\"electron\"),\n    remote = _require.remote;\n\nvar BrowserWindow = remote.BrowserWindow;\n\n\nmodule.exports = {\n  say: function say() {\n    alert(\"sdds\");\n    var win = new BrowserWindow();\n  }\n};"},"hash":"5860c2e8b5af55c636d6aa361f851733"}
