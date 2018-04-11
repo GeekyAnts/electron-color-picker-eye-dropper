@@ -4,7 +4,6 @@
 [![npm package][npm-badge]][npm]
 [![Coveralls][coveralls-badge]][coveralls]
 
-Describe color-eye-dropper here.
 
 ### Install
   `npm i electron-color-picker-eye-dropper-screen`
