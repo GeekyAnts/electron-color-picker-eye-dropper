@@ -15,9 +15,7 @@ Describe color-eye-dropper here.
 
   To run in development mode
     
-    ```sh
-      npm run dev
-    ```
+    `npm run dev`
 
 
 [build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
