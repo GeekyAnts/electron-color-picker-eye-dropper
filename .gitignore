@@ -1,9 +1,7 @@
-/coverage
+/.cache
+/dist
 /demo/dist
 /demo/.cache
-/es
-/lib
 /node_modules
-/umd
+
 npm-debug.log*
-.cache
