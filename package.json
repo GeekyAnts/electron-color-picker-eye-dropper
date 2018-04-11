@@ -4,12 +4,6 @@
   "description": "color-picker electron component",
   "main": "src/index.js",
   "module": "es/index.js",
-  "files": [
-    "css",
-    "es",
-    "lib",
-    "umd"
-  ],
   "scripts": {
     "build": "nwb build-react-component",
     "clean": "nwb clean-module && nwb clean-demo",
@@ -22,12 +16,12 @@
   "dependencies": {
     "array-find": "^1.0.0",
     "lodash.findindex": "^4.6.0",
-    "recordrtc": "^5.4.6"
+    "recordrtc": "^5.4.6",
+    "electron-screencapture": "^1.1.0"
   },
   "peerDependencies": {
-    "electron": "^1.8.4",
-    "electron-screencapture": "^1.1.0",
-    "react": "16.x"
+    "react": "16.x",
+    "electron": "^1.8.4"
   },
   "devDependencies": {
     "electron": "^1.8.4",
