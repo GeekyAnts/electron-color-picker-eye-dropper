@@ -56,9 +56,10 @@ function clickHandler(event, canvas) {
   ipc.send('clickedPixels', pixelData);
 
   var window = remote.getCurrentWindow();
+  window.setSimpleFullScreen(false);
   window.close();
 
   // window.unmaximize();
   // window.close();
 }
-// add color picker api.
+

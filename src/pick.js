@@ -2,7 +2,7 @@
 
 const { remote } = require("electron");
 // var robot = require ("robot-js");
-
+const ipcMain = require('electron').ipcMain;
 const { BrowserWindow } = remote;
 const path = require('path')
 const url = require('url');
@@ -10,6 +10,7 @@ const ipc = require('electron').ipcRenderer;
 // const ipcMain = require('electron').ipcMain;
 const { desktopCapturer } = require("electron");
 import { takeScreenshot } from "./screencapture";
+console.log(ipcMain, 'ipc');
 
 let win;
 exports.pick = function () {
@@ -34,15 +35,17 @@ exports.pick = function () {
           });
         });
     });
+    // win.on('closed', () => {
+    //   win = null
+    // })
     ipc.on('clickedPixels', (event, message) => {
       const pixels = JSON.parse(message).data;
       console.log(pixels, 'pixels selected');
-      // let rgbBox = document.getElementById('rgb-color-box');
-      // let rgbValues = document.getElementById('rgb-values');
-      // rgbValues.innerHTML = `rgba(${pixels[0]},${pixels[1]}, ${pixels[2]}, ${pixels[3]})`
-      // rgbBox.style.display = "inline-block";
-      // rgbBox.style.backgroundColor = `rgba(${pixels[0]},${pixels[1]}, ${pixels[2]}, ${pixels[3]})`;
-      win.setSimpleFullScreen(false);
+      let rgbBox = document.getElementById('rgb-color-box');
+      let rgbValues = document.getElementById('rgb-values');
+      rgbValues.innerHTML = `rgba(${pixels[0]},${pixels[1]}, ${pixels[2]}, ${pixels[3]})`
+      rgbBox.style.display = "inline-block";
+      rgbBox.style.backgroundColor = `rgba(${pixels[0]},${pixels[1]}, ${pixels[2]}, ${pixels[3]})`;
       resolve(pixels);
     });
 

@@ -1,32 +1,27 @@
 {
   "name": "electron-color-picker-eye-dropper-screen",
-  "version": "1.0.3",
+  "version": "1.0.2",
   "description": "color-picker electron component",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "module": "es/index.js",
   "scripts": {
-    "build": "nwb build-react-component",
-    "clean": "nwb clean-module && nwb clean-demo",
-    "start": "nwb serve-react-demo",
-    "electron": "electron scripts/start.js",
-    "test": "nwb test-react",
-    "test:coverage": "nwb test-react --coverage",
-    "test:watch": "nwb test-react --server"
+    "build": "parcel build src/index.js --target=electron",
+    "start-demo": "parcel demo/index.html --public-url='./' --target=electron",
+    "start-electron": "electron scripts/start.js"
   },
   "dependencies": {
     "array-find": "^1.0.0",
     "lodash.findindex": "^4.6.0",
-    "recordrtc": "^5.4.6",
-    "electron-screencapture": "^1.1.0"
+    "recordrtc": "^5.4.6"
   },
   "peerDependencies": {
-    "react": "16.x",
-    "electron": "^1.8.4"
+    "electron": "^1.8.4",
+    "electron-screencapture": "^1.1.0",
+    "react": "16.x"
   },
   "devDependencies": {
     "electron": "^1.8.4",
     "foreman": "^2.0.0",
-    "nwb": "0.21.x",
     "react": "^16.3.1",
     "react-dom": "^16.3.1"
   },
