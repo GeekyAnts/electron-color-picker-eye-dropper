@@ -17,7 +17,7 @@ class Demo extends Component {
 
   attach() {
     // console.log(Example.say())
-    Example.pick();
+    Example.pick().then(r => console.log(r, "resp"))
   }
 
   render() {

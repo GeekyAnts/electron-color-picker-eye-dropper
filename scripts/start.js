@@ -4,11 +4,10 @@ const url = require("url");
 const ipc = require('electron').ipcMain;
 
 let win;
-ipc.on('reply', (event, message) => {
+ipc.on('clickedPixels', (event, message) => {
   console.log(`This is the message from the second window sent via main: ${JSON.stringify(message)}`);
-  win.webContents.send('messageFromMain', JSON.stringify(message));
+  win.webContents.send('clickedPixels', JSON.stringify(message));
 });
-console.log("In main function", ipc)
 
 function createWindow() {
   // Create the browser window.

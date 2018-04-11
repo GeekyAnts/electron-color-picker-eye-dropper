@@ -1,5 +1,5 @@
 {
-  "name": "color-eye-dropper",
+  "name": "electron-color-picker-eye-dropper",
   "version": "1.0.0",
   "description": "color-eye-dropper React component",
   "main": "lib/index.js",
@@ -22,7 +22,9 @@
   "dependencies": {
     "array-find": "^1.0.0",
     "lodash.findindex": "^4.6.0",
-    "recordrtc": "^5.4.6"
+    "melanke-watchjs": "^1.4.3",
+    "recordrtc": "^5.4.6",
+    "robot-js": "^2.0.0"
   },
   "peerDependencies": {
     "electron": "^1.8.4",
@@ -40,7 +42,7 @@
   "author": "",
   "homepage": "",
   "license": "MIT",
-  "repository": "",
+  "repository": "https://github.com/GeekyAnts/electron-color-picker-eye-dropper",
   "keywords": [
     "react-component"
   ]
