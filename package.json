@@ -6,6 +6,7 @@
   "module": "es/index.js",
   "scripts": {
     "build": "parcel build src/index.js --target=electron",
+    "dev": "concurrently --kill-others \"npm run start-demo\" \"npm run start-electron\"",
     "start-demo": "parcel demo/index.html --public-url='./' --target=electron",
     "start-electron": "electron scripts/start.js"
   },
@@ -20,6 +21,7 @@
     "react": "16.x"
   },
   "devDependencies": {
+    "concurrently": "^3.5.1",
     "electron": "^1.8.4",
     "foreman": "^2.0.0",
     "react": "^16.3.1",
