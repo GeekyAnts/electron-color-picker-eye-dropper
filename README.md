@@ -6,6 +6,20 @@
 
 Describe color-eye-dropper here.
 
+# Electron Eye color picker
+
+### Install
+  `npm i electron-color-picker-eye-dropper-screen`
+
+### Development
+
+  To run in development mode
+    
+    ```sh
+      npm run dev
+    ```
+
+
 [build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
 [build]: https://travis-ci.org/user/repo
 
