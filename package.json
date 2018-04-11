@@ -1,6 +1,6 @@
 {
   "name": "electron-color-picker-eye-dropper-screen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "color-picker electron component",
   "main": "lib/index.js",
   "module": "es/index.js",
