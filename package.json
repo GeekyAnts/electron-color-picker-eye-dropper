@@ -12,11 +12,11 @@
   "dependencies": {
     "array-find": "^1.0.0",
     "lodash.findindex": "^4.6.0",
-    "recordrtc": "^5.4.6"
+    "recordrtc": "^5.4.6",
+    "electron-screencapture": "^1.1.0"
   },
   "peerDependencies": {
     "electron": "^1.8.4",
-    "electron-screencapture": "^1.1.0",
     "react": "16.x"
   },
   "devDependencies": {
