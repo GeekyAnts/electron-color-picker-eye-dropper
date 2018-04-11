@@ -1,8 +1,8 @@
 {
-  "name": "electron-color-picker-eye-dropper",
-  "version": "1.0.0",
-  "description": "color-eye-dropper React component",
-  "main": "lib/index.js",
+  "name": "electron-color-picker-eye-dropper-screen",
+  "version": "1.0.1",
+  "description": "color-picker electron component",
+  "main": "src/index.js",
   "module": "es/index.js",
   "files": [
     "css",
