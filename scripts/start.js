@@ -2,12 +2,8 @@ const { app, BrowserWindow } = require("electron");
 const path = require("path");
 const url = require("url");
 const ipc = require('electron').ipcMain;
-
+const {ipcMainHandler} = require( '../src/ipcMainHandler');
 let win;
-ipc.on('clickedPixels', (event, message) => {
-  console.log(`This is the message from the second window sent via main: ${JSON.stringify(message)}`);
-  win.webContents.send('clickedPixels', JSON.stringify(message));
-});
 
 function createWindow() {
   // Create the browser window.
@@ -21,6 +17,7 @@ function createWindow() {
       slashes: true
     })
   );
+  ipcMainHandler(win)
 }
 
 app.on("ready", createWindow);

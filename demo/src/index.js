@@ -3,8 +3,7 @@ import { render } from "react-dom";
 const { desktopCapturer } = require("electron");
 const { takeScreenshot } = require("../../src/screencapture");
 
-import Example from "../../src";
-
+import Eyedropper from "../../src";
 class Demo extends Component {
   constructor() {
 
@@ -16,8 +15,7 @@ class Demo extends Component {
   }
 
   attach() {
-    // console.log(Example.say())
-    Example.pick().then(r => console.log(r, "resp"))
+    Eyedropper.pick().then(r => console.log(r, "resp"))
   }
 
   render() {
