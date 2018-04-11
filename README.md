@@ -6,8 +6,6 @@
 
 Describe color-eye-dropper here.
 
-# Electron Eye color picker
-
 ### Install
   `npm i electron-color-picker-eye-dropper-screen`
 
