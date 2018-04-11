@@ -22,15 +22,12 @@
   "dependencies": {
     "array-find": "^1.0.0",
     "lodash.findindex": "^4.6.0",
-    "melanke-watchjs": "^1.4.3",
-    "recordrtc": "^5.4.6",
-    "robot-js": "^2.0.0"
+    "recordrtc": "^5.4.6"
   },
   "peerDependencies": {
     "electron": "^1.8.4",
     "electron-screencapture": "^1.1.0",
-    "react": "16.x",
-    "robotjs": "^0.5.1"
+    "react": "16.x"
   },
   "devDependencies": {
     "electron": "^1.8.4",
