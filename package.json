@@ -5,9 +5,9 @@
   "main": "dist/index.js",
   "module": "es/index.js",
   "scripts": {
-    "build": "parcel build src/index.js --target=electron",
+    "build": "microbundle",
     "dev": "concurrently --kill-others \"npm run start-demo\" \"npm run start-electron\"",
-    "start-demo": "parcel demo/index.html --public-url='./' --target=electron",
+    "start-demo": "microbundle watch",
     "start-electron": "electron scripts/start.js"
   },
   "dependencies": {
@@ -21,9 +21,13 @@
     "react": "16.x"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
     "concurrently": "^3.5.1",
     "electron": "^1.8.4",
     "foreman": "^2.0.0",
+    "microbundle": "^0.4.4",
     "react": "^16.3.1",
     "react-dom": "^16.3.1"
   },
