@@ -1,10 +1,10 @@
-var {ipcMainHandler} = require('./ipcMainHandler');
-var {pick} = require('./pick');
+import pick from './pick';
+import ipcMainHandler from './ipcMainHandler';
 
 // console.log(pick, ipcMainHandler);
 // exports.pick = pick;
 // exports.ipcMainHandler = ipcMainHandler;
 module.exports = {
-  ipcMainHandler,
-  pick
+  pick,
+  ipcMainHandler
 }

@@ -13,7 +13,7 @@ import { takeScreenshot } from "./screencapture";
 console.log(ipcMain, 'ipc');
 
 let win;
-exports.pick = function () {
+pick = function () {
   return new Promise((resolve, reject) => {
 
     desktopCapturer.getSources({ types: ["screen"] }, (error, sources) => {
@@ -51,3 +51,4 @@ exports.pick = function () {
 
   });
 }
+export default pick;
