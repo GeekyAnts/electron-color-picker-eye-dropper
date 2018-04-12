@@ -11,7 +11,6 @@
 ### Development
 
   To run in development mode
-    
     `npm run dev`
 
 
