@@ -1,20 +1,27 @@
 {
   "name": "electron-color-picker-eye-dropper-screen",
-  "version": "1.0.10",
+  "version": "1.0.7",
   "description": "color-picker electron component",
   "main": "dist/index.js",
   "module": "es/index.js",
   "scripts": {
-    "build": "microbundle --external all",
+    "compile": "babel --presets es2015,stage-0 -d dist/ src/",
+    "prepublish": "npm run compile",
+    "build": "parcel build src/index.js --target=electron",
     "dev": "concurrently --kill-others \"npm run start-demo\" \"npm run start-electron\"",
-    "start-demo": "microbundle watch",
+    "start-demo": "cd demo && parcel index.html --public-url='./' --target=electron",
     "start-electron": "electron scripts/start.js"
   },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "array-find": "^1.0.0",
+    "electron-remote": "^1.2.0",
+    "electron-screencapture": "^1.1.0",
     "lodash.findindex": "^4.6.0",
     "recordrtc": "^5.4.6",
-    "electron-screencapture": "^1.1.0"
+    "remote": "^0.2.6"
   },
   "peerDependencies": {
     "electron": "^1.8.4",
@@ -23,13 +30,16 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "cli": "^1.0.1",
     "concurrently": "^3.5.1",
     "electron": "^1.8.4",
     "foreman": "^2.0.0",
-    "microbundle": "^0.4.4",
     "react": "^16.3.1",
-    "react-dom": "^16.3.1"
+    "react-dom": "^16.3.1",
+    "webpack": "^4.5.0"
   },
   "author": "",
   "homepage": "",

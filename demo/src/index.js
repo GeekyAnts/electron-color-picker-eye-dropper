@@ -5,7 +5,7 @@ const { takeScreenshot } = require("../../src/screencapture");
 
 import Eyedropper from "../../src";
 
-console.log(Eyedropper, 'eyedropper');
+// console.log(Eyedropper, 'eyedropper');
 class Demo extends Component {
   constructor() {
 

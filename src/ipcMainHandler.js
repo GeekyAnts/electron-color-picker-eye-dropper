@@ -1,11 +1,11 @@
 
   const ipc = require('electron').ipcMain;
 
-  ipcMainHandler = function (win) {
+  module.exports = function (win) {
     ipc.on('clickedPixels', (event, message) => {
       win.webContents.send('clickedPixels', JSON.stringify(message));
     })
   };
 
-export default ipcMainHandler;
+// export default ipcMainHandler;
 

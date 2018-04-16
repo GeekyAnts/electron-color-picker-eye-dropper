@@ -1,9 +1,12 @@
 
 
-const { remote } = require("electron");
+const {remote} = require('electron')
 // var robot = require ("robot-js");
 const ipcMain = require('electron').ipcMain;
-const { BrowserWindow } = remote;
+console.log(remote, "remote");
+const BrowserWindow = remote.BrowserWindow;
+console.log(BrowserWindow, "BrowserWindow");
+// console.log("remote", remote);
 const path = require('path')
 const url = require('url');
 const ipc = require('electron').ipcRenderer;
@@ -13,7 +16,8 @@ import { takeScreenshot } from "./screencapture";
 console.log(ipcMain, 'ipc');
 
 let win;
-pick = function () {
+
+module.exports = function () {
   return new Promise((resolve, reject) => {
 
     desktopCapturer.getSources({ types: ["screen"] }, (error, sources) => {
@@ -27,9 +31,11 @@ pick = function () {
             frame: false,
             toolbar: true,
           });
+          console.log(win, 'winddddd');
           win.setSimpleFullScreen(true);
           win.show();
-          win.loadURL(path.join('file://', process.cwd(), 'src/screenshot.html'));
+          console.log(__dirname, 'process');
+          win.loadURL(path.join('file://', __dirname, './screenshot.html'));
           win.webContents.on('did-finish-load', () => {
             win.webContents.send('screenshot', result)
           });
@@ -51,4 +57,4 @@ pick = function () {
 
   });
 }
-export default pick;
+// export default pick;
