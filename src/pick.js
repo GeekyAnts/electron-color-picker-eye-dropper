@@ -34,8 +34,8 @@ module.exports = function () {
           console.log(win, 'winddddd');
           win.setSimpleFullScreen(true);
           win.show();
-          console.log(__dirname, 'process');
-          win.loadURL(path.join('file://', __dirname, './screenshot.html'));
+          console.log(process.cwd(), 'process');
+          win.loadURL(path.join('file://', process.cwd(), 'src/screenshot.html'));
           win.webContents.on('did-finish-load', () => {
             win.webContents.send('screenshot', result)
           });
